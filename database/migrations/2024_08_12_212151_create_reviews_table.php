@@ -20,10 +20,9 @@ return new class extends Migration {
 
             $table->timestamps();
 
-            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
+            //$table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
 
-            $table->foreignId('book_id')
-
+            $table->foreignId('book_id')->constrained()->cascadeOnDelete();
         });
     }
 
