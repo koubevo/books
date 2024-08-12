@@ -22,6 +22,8 @@ return new class extends Migration {
 
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
 
+            $table->foreignId('book_id')
+
         });
     }
 
